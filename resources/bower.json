@@ -1,0 +1,16 @@
+{
+  "name": "resources",
+  "version": "0.0.1",
+  "authors": [
+    "Bushev Yuriy <bushevuv@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4"
+  }
+}

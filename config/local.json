@@ -1,0 +1,32 @@
+{
+  "PORT": "8080",
+  "HOST": "localhost",
+
+  "MAIL_SMTP_HOST": "",
+  "MAIL_SMTP_PORT": "",
+  "MAIL_SMTP_USERNAME": "",
+  "MAIL_SMTP_PASSWORD": "",
+
+  "MASTER_PASSWORD": "",
+
+  "db": {
+    "username": "skeleton",
+    "password": "12345",
+    "database": "nodejs-mvc-skeleton",
+    "host": "localhost",
+    "dialect": "mysql",
+    "timezone": "+04:00",
+    "pool": {
+      "max": "5",
+      "min": "0",
+      "idle": "10000"
+    }
+  },
+
+  "session_secret": "12345",
+  "session_key": "token",
+
+  "allowed_domains": ["localhost"],
+
+  "ADMIN_MAIL": "TODO"
+}

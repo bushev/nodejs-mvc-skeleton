@@ -1,0 +1,54 @@
+{
+  "name": "nodejs-mvc-skeleton",
+  "description": "Node.js + Express 4 + Sequelize 3 + Jade + Twitter Bootstrap 3",
+  "author": "Yuriy Bushev",
+  "version": "0.0.1",
+  "keywords": [
+    "nodejs",
+    "mvc",
+    "skeleton"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bushev/nodejs-mvc-skeleton"
+  },
+  "bugs": {
+    "url": "https://github.com/bushev/nodejs-mvc-skeleton/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "async": "^1.2.1",
+    "bcryptjs": "^2.1.0",
+    "body-parser": "^1.13.1",
+    "compression": "^1.5.0",
+    "connect-assetmanager": "0.0.28",
+    "connect-session-sequelize": "^2.2.1",
+    "cookie-parser": "^1.3.5",
+    "debug": "^2.2.0",
+    "express": "^4.13.0",
+    "express-domain-middleware": "^0.1.0",
+    "express-session": "^1.11.3",
+    "express-useragent": "^0.1.8",
+    "jade": "^1.11.0",
+    "less-middleware": "^2.0.1",
+    "merge": "^1.2.0",
+    "moment": "^2.10.3",
+    "morgan": "^1.6.0",
+    "mysql": "^2.7.0",
+    "nconf": "^0.7.1",
+    "nightwatch": "^0.7.0",
+    "nodemailer": "^1.3.4",
+    "nodemailer-html-to-text": "^1.0.1",
+    "nodemailer-smtp-transport": "^1.0.3",
+    "passport": "^0.2.2",
+    "passport-local": "^1.0.0",
+    "passport-vkontakte": "^0.4.0",
+    "random-string": "^0.1.2",
+    "sequelize": "^3.3.0",
+    "winston": "^1.0.0",
+    "winston-mail": "^0.4.0"
+  },
+  "scripts": {
+    "test": "nightwatch tests\\nightwatch.js --config tests\\nightwatch.json"
+  }
+}

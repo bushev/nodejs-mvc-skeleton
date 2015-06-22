@@ -1,0 +1,46 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        block seo
+        link(rel="icon" type="image/png" href="/favicon.ico")
+        link(rel='stylesheet', href='/stylesheets/lib.css')
+        link(rel='stylesheet', href='/stylesheets/style.css')
+
+body
+    #wrap
+        .container
+            #header.header.clearfix
+                nav
+                    ul.nav.nav-pills.pull-right
+                        | &nbsp;
+                        li(class={active: currentUrl === '/'}, role='presentation')
+                            a(href='/') Home
+                        li(class={active: currentUrl === '/about'}, role='presentation')
+                            a(href='/about') About
+
+                        if user
+                            li(class={active: currentUrl === '/cabinet'}, role='presentation')
+                                a(href='/cabinet') Profile
+                            li(class={active: currentUrl === '/logout'}, role='presentation')
+                                a(href='/logout') Logout
+                        else
+                            li(class={active: currentUrl === '/register'}, role='presentation')
+                                a(href='/register') Register
+                            li(class={active: currentUrl === '/login'}, role='presentation')
+                                a(href='/login') Login
+
+            div#main.clearfix
+                hr
+                block content
+    footer#footer.footer
+        .container
+            hr
+            .row
+                .col-sm-3
+                    p © 2015
+                .col-sm-9
+                    p.footer-description
+                        | footer description
+
+    script(src='/javascripts/client.js')
