@@ -2,7 +2,12 @@ doctype html
 html
     head
         meta(charset="utf-8")
-        block seo
+        if data && data.seo
+            title= data.seo.title
+            if data.seo.description
+                meta(name='description', content=data.seo.description)
+            if data.seo.keywords
+                meta(name='keywords', content=data.seo.keywords)
         link(rel="icon" type="image/png" href="/favicon.ico")
         link(rel='stylesheet', href='/stylesheets/lib.css')
         link(rel='stylesheet', href='/stylesheets/style.css')

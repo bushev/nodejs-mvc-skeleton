@@ -11,9 +11,8 @@ router.get('/verify_user/:code', function (req, res, next) {
     //user.verify();
 });
 
-router.get('/register', function (req, res) {
-    res.render('register');
-});
+router.get('/register', require('../controllers/register/index'));
+router.post('/register', require('../controllers/register/index'));
 
 router.post('/register', function (req, res, next) {
     // models.User.register();

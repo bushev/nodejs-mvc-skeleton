@@ -1,0 +1,30 @@
+extends layout
+
+block content
+    h1 Register
+    p
+        | Register text
+    form.form-horizontal(method='POST')
+        fieldset
+            .form-group
+                label.col-md-4.control-label(for='email') E-mail
+                .col-md-4
+                    input#email.form-control.input-md(name='email', type='email')
+            .form-group
+                label.col-md-4.control-label(for='password') Password
+                .col-md-4
+                    input#password.form-control.input-md(name='password', type='password')
+            .form-group
+                label.col-md-4.control-label(for='password2') Repeat Password
+                .col-md-4
+                    input#password2.form-control.input-md(name='password2', type='password')
+            .form-group
+                label.col-md-4.control-label(for='terms') Terms
+                .col-md-4
+                    label.checkbox-inline(for='terms')
+                        input#eula(type='checkbox', name='terms', value='1')
+            .form-group
+                label.col-md-4.control-label(for='submit')
+                .col-md-4
+                    button#submit.btn.btn-primary(name='submit') Submit
+    pre= JSON.stringify(data)
