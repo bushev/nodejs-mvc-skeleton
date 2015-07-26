@@ -1,11 +1,15 @@
 "use strict";
 
-var fs          = require("fs")
-    , path      = require("path")
+var fs = require("fs")
+    , path = require("path")
     , Sequelize = require("sequelize")
-    , config    = require("../config")
-    , sequelize = new Sequelize(config.get('db:database'), config.get('db:username'), config.get('db:password'), config.get('db'))
-    , models    = {};
+    , config = require("../config")
+    , merge = require('merge')
+    , sequelize = new Sequelize(config.get('db:database'),
+        config.get('db:username'),
+        config.get('db:password'),
+        merge({logging: false}, config.get('db')))
+    , models = {};
 
 fs.readdirSync(__dirname).filter(function (file) {
     return (file.indexOf(".") !== 0) && (file !== "index.js");

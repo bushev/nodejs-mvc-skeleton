@@ -1,6 +1,5 @@
 var express          = require('express')
     , path           = require('path')
-    , logger         = require('morgan')
     , log            = require('./lib/log')
     , cookieParser   = require('cookie-parser')
     , bodyParser     = require('body-parser')
@@ -85,8 +84,6 @@ passport.use(middleware.passportLocalStrategy);
 
 passport.serializeUser(middleware.passportSerializeUser);
 passport.deserializeUser(middleware.passportDeserializeUser);
-
-app.use(logger('dev'));
 
 app.use(require('express-domain-middleware'));
 
