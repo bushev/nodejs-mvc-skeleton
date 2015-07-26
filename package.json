@@ -18,6 +18,7 @@
   "license": "MIT",
   "dependencies": {
     "async": "^1.2.1",
+    "bcrypt": "^0.8.4",
     "bcryptjs": "^2.1.0",
     "body-parser": "^1.13.1",
     "compression": "^1.5.0",
@@ -29,8 +30,9 @@
     "express-domain-middleware": "^0.1.0",
     "express-session": "^1.11.3",
     "express-useragent": "^0.1.8",
+    "flash": "^1.1.0",
     "jade": "^1.11.0",
-    "less-middleware": "^2.0.1",
+    "mandrill-api": "^1.0.45",
     "merge": "^1.2.0",
     "moment": "^2.10.3",
     "morgan": "^1.6.0",
@@ -45,6 +47,8 @@
     "passport-vkontakte": "^0.4.0",
     "random-string": "^0.1.2",
     "sequelize": "^3.3.0",
+    "tense": "^1.0.0",
+    "underscore": "^1.8.3",
     "winston": "^1.0.0",
     "winston-mail": "^0.4.0"
   },

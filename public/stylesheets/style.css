@@ -1,0 +1,56 @@
+body {
+    font: 15px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+html, body, #wrap {
+    height: 100%;
+}
+
+body > #wrap {
+    height: auto;
+    min-height: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#header .dropdown-menu {
+    min-width: 90px;
+}
+
+#main {
+    padding-bottom: 150px;
+}
+
+#footer {
+    position: relative;
+    margin-top: -150px;
+    height: 150px;
+    clear: both;
+}
+
+#footer .footer-description {
+    color: #666;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+/* Hides from IE-mac \*/
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+
+/* End hide from IE-mac */

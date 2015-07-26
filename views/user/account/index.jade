@@ -1,0 +1,23 @@
+extends layout
+
+block user_content
+    form.form-horizontal(method='POST', action='/user/account')
+        fieldset
+            hr
+            h1 Update password
+            .form-group
+                label.col-md-4.control-label(for='current_password') Current password
+                .col-md-4
+                    input#current_password.form-control.input-md(name='current_password', type='password')
+            .form-group
+                label.col-md-4.control-label(for='new_password') New password
+                .col-md-4
+                    input#new_password.form-control.input-md(name='new_password', type='password')
+            .form-group
+                label.col-md-4.control-label(for='new_password2') Confirm password
+                .col-md-4
+                    input#new_password2.form-control.input-md(name='new_password2', type='password')
+            .form-group
+                label.col-md-4.control-label(for='submit')
+                .col-md-4
+                    button#submit.btn.btn-primary(name='update_password', type='submit', value='Update') Update

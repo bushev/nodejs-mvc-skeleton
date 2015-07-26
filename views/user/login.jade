@@ -1,0 +1,20 @@
+extends ../layout
+block content
+    h1 Login
+    form.form-horizontal(method='POST', action='/login')
+        fieldset
+            .form-group
+                label.col-md-4.control-label(for='email') E-mail
+                .col-md-4
+                    input#email.form-control.input-md(name='email', type='email')
+            .form-group
+                label.col-md-4.control-label(for='password') Password
+                .col-md-4
+                    input#password.form-control.input-md(name='password', type='password')
+            .form-group
+                label.col-md-4.control-label(for='submit')
+                .col-md-2
+                    a(href='/forgot_password') Forgot password?
+                .col-md-2
+                    .pull-right
+                        button#submit.btn.btn-primary(type='submit') Sign in

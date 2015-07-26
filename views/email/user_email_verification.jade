@@ -1,0 +1,9 @@
+extends layout
+block body
+    br
+    | Hello!
+    br
+    br
+    | Please, confirm the E-mail by clicking this link:&nbsp;
+    a(href='#{BASE_URL}/verify_email/#{user.email_verification_code}')
+        b #{BASE_URL}/verify_email/#{user.email_verification_code}

@@ -7,12 +7,12 @@ function Controller(req, res) {
     Controller.super_.apply(this, arguments);
 
     this.res.locals.data.seo = {
-        title: 'Register title',
-        description: 'Register description',
-        keywords: 'Register keywords'
+        title: 'Login title',
+        description: 'Login description',
+        keywords: 'Login keywords'
     };
 
-    this.template = 'register';
+    this.template = 'user/login';
 }
 
 util.inherits(Controller, ControllerBase);
@@ -25,8 +25,10 @@ module.exports = function (req, res, next) {
             ctrl.respond();
             break;
         case 'POST':
-            // TODO
-            ctrl.respond();
+            ctrl.models.User.login(req, function (err) {
+                if (err) return ctrl.respond(err);
+                ctrl.redirect('/');
+            });
             break;
         default:
             ctrl.respond({code: 400, message: 'Unexpected HTTP request, ' + req.method + ': ' + req.path});

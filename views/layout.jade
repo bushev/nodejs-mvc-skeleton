@@ -19,24 +19,28 @@ body
                 nav
                     ul.nav.nav-pills.pull-right
                         | &nbsp;
-                        li(class={active: currentUrl === '/'}, role='presentation')
+                        li(class={active: currentUrl === '/'})
                             a(href='/') Home
-                        li(class={active: currentUrl === '/about'}, role='presentation')
-                            a(href='/about') About
 
                         if user
-                            li(class={active: currentUrl === '/cabinet'}, role='presentation')
-                                a(href='/cabinet') Profile
-                            li(class={active: currentUrl === '/logout'}, role='presentation')
-                                a(href='/logout') Logout
+                            li(class={active: currentUrl === '/user/account'})
+                                a(href='/user/account') Account
+                            li(class={active: currentUrl === '/user/logout'})
+                                a(href='/user/logout') Logout
                         else
-                            li(class={active: currentUrl === '/register'}, role='presentation')
+                            li(class={active: currentUrl === '/register'})
                                 a(href='/register') Register
-                            li(class={active: currentUrl === '/login'}, role='presentation')
+                            li(class={active: currentUrl === '/login'})
                                 a(href='/login') Login
 
             div#main.clearfix
                 hr
+                if flash
+                    .row
+                        .col-xs-10.col-xs-offset-1
+                            br
+                            while message = flash.shift()
+                                div(role='alert', class='alert alert-#{message.type}')= message.message
                 block content
     footer#footer.footer
         .container

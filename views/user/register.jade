@@ -1,15 +1,17 @@
-extends layout
+extends ../layout
 
 block content
-    h1 Register
-    p
-        | Register text
-    form.form-horizontal(method='POST')
+    h2 Register a new account
+    form.form-horizontal(method='POST', action='/register')
         fieldset
             .form-group
                 label.col-md-4.control-label(for='email') E-mail
                 .col-md-4
                     input#email.form-control.input-md(name='email', type='email')
+            .form-group
+                label.col-md-4.control-label(for='username') Username
+                .col-md-4
+                    input#username.form-control.input-md(name='username', type='text')
             .form-group
                 label.col-md-4.control-label(for='password') Password
                 .col-md-4
@@ -26,5 +28,5 @@ block content
             .form-group
                 label.col-md-4.control-label(for='submit')
                 .col-md-4
-                    button#submit.btn.btn-primary(name='submit') Submit
+                    button#submit.btn.btn-primary(type='submit') Submit
     pre= JSON.stringify(data)

@@ -64,15 +64,19 @@ var sessionMiddleware = session({
 app.use(function (req, res, next) {
 
     if (!req.headers['user-agent']) {
+        req.session = {}; // Make `flash` assertion happy
         return next();
     }
 
     if (userAgent.parse(req.headers['user-agent']).isBot) {
+        req.session = {}; // Make `flash` assertion happy
         return next();
     }
 
     return sessionMiddleware(req, res, next);
 });
+
+app.use(require('flash')());
 
 app.use(passport.initialize());
 app.use(passport.session());
@@ -83,7 +87,6 @@ passport.serializeUser(middleware.passportSerializeUser);
 passport.deserializeUser(middleware.passportDeserializeUser);
 
 app.use(logger('dev'));
-app.use(require('less-middleware')(path.join(__dirname, 'public')));
 
 app.use(require('express-domain-middleware'));
 
