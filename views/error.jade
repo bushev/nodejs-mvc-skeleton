@@ -1,4 +1,5 @@
 extends layout
 
 block content
-   h1= data.error
+    h1= data.error.message
+    pre= data.error.stack

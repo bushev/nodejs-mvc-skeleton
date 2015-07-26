@@ -4,7 +4,7 @@
 
   "MANDRILL_API_KEY": "HaHpCsYn1EyqZ7c2mBSJUQ",
 
-  "MASTER_PASSWORD": "",
+  "MASTER_PASSWORD": "12345",
 
   "db": {
     "username": "skeleton",
@@ -12,7 +12,6 @@
     "database": "nodejs-mvc-skeleton",
     "host": "localhost",
     "dialect": "mysql",
-    "timezone": "+04:00",
     "pool": {
       "max": "5",
       "min": "0",
@@ -22,8 +21,7 @@
 
   "session_secret": "12345",
   "session_key": "token",
+  "session_lifetime_in_days": "30",
 
-  "allowed_domains": ["localhost"],
-
-  "ADMIN_MAIL": "TODO"
+  "allowed_domains": ["localhost"]
 }

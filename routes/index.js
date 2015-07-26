@@ -22,4 +22,10 @@ router.get('/user/logout', require('../controllers/user/logout'));
 router.get('/user/account', require('../controllers/user/account'));
 router.post('/user/account', require('../controllers/user/account'));
 
+router.get('/route_with_error', function(req, res, next) {
+    next(new Error('Oops, error occurred!'));
+});
+
+router.use(require('../controllers/404'));
+
 module.exports = router;

@@ -15,7 +15,6 @@ module.exports = {
 
     "Register, passwords doesn't match": function (browser) {
         browser
-            .useXpath()
             .url(BASE_URL + '/register')
             .waitForElementVisible('//h2[contains(text(), "Register a new account")]', 1000)
 
@@ -33,7 +32,6 @@ module.exports = {
 
     "Register, terms was not agreed": function (browser) {
         browser
-            .useXpath()
             .url(BASE_URL + '/register')
             .waitForElementVisible('//h2[contains(text(), "Register a new account")]', 1000)
 
@@ -50,7 +48,6 @@ module.exports = {
 
     "Register": function (browser) {
         browser
-            .useXpath()
             .url(BASE_URL + '/register')
             .waitForElementVisible('//h2[contains(text(), "Register a new account")]', 1000)
 
@@ -67,7 +64,6 @@ module.exports = {
 
     "Register, E-mail is busy": function (browser) {
         browser
-            .useXpath()
             .url(BASE_URL + '/register')
             .waitForElementVisible('//h2[contains(text(), "Register a new account")]', 1000)
 
@@ -85,7 +81,6 @@ module.exports = {
 
     "Log in, wrong password": function (browser) {
         browser
-            .useXpath()
             .url(BASE_URL)
 
             .waitForElementVisible('//a[@href="/login"]', 1000)
@@ -101,7 +96,6 @@ module.exports = {
 
     "Log in, E-mail not verified": function (browser) {
         browser
-            .useXpath()
             .url(BASE_URL)
 
             .waitForElementVisible('//a[@href="/login"]', 1000)
@@ -117,7 +111,6 @@ module.exports = {
 
     "Verify email, wrong code": function (browser) {
         browser
-            .useXpath()
             .url(BASE_URL + '/verify_email/oooopsss')
             .waitForElementVisible('//div[contains(text(), "Wrong confirmation code")]', 1000)
     },
@@ -131,7 +124,6 @@ module.exports = {
             }
 
             browser
-                .useXpath()
                 .url(BASE_URL + '/verify_email/' + user.email_verification_code)
                 .waitForElementVisible('//div[contains(text(), "E-mail address was successfully verified!")]', 1000)
                 .perform(function (browser, done) {
@@ -146,7 +138,6 @@ module.exports = {
 
     "Log in": function (browser) {
         browser
-            .useXpath()
             .url(BASE_URL)
 
             .waitForElementVisible('//a[@href="/login"]', 1000)
@@ -162,7 +153,6 @@ module.exports = {
 
     "Change password, wrong current": function (browser) {
         browser
-            .useXpath()
             .url(BASE_URL + '/user/account')
 
             .waitForElementVisible('//*[contains(text(), "Update password")]', 1000)
@@ -178,7 +168,6 @@ module.exports = {
 
     "Change password": function (browser) {
         browser
-            .useXpath()
             .url(BASE_URL + '/user/account')
 
             .waitForElementVisible('//*[contains(text(), "Update password")]', 1000)
@@ -194,7 +183,6 @@ module.exports = {
 
     "Change password, not matched": function (browser) {
         browser
-            .useXpath()
             .url(BASE_URL + '/user/account')
 
             .waitForElementVisible('//*[contains(text(), "Update password")]', 1000)
@@ -210,7 +198,6 @@ module.exports = {
 
     "Change password back": function (browser) {
         browser
-            .useXpath()
             .url(BASE_URL + '/user/account')
 
             .waitForElementVisible('//*[contains(text(), "Update password")]', 1000)
@@ -226,7 +213,6 @@ module.exports = {
 
     "Log out": function (browser) {
         browser
-            .useXpath()
             .url(BASE_URL)
 
             .waitForElementVisible('//a[@href="/user/logout"]', 1000)
@@ -238,7 +224,6 @@ module.exports = {
 
     "Unauthorized access (/user/account)": function (browser) {
         browser
-            .useXpath()
             .url(BASE_URL + '/user/account')
             .waitForElementVisible('//a[@href="/login"]', 1000)
     },

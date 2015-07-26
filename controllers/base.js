@@ -86,6 +86,7 @@ ControllerBase.prototype.respond = function (err) {
         } else {
             $this.log_debug('respond: set error');
             $this.flushError(err.message);
+            $this.res.locals.data.error = err;
             $this.res.status(err.code || 500);
         }
     }
